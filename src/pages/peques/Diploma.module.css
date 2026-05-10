@@ -10,20 +10,19 @@
 }
 
 .card {
-  width: min(100%, 1100px);
-
+  width: min(100%, 980px);
   background: rgba(255, 255, 255, 0.9);
-
   border-radius: 36px;
-
-  overflow: hidden;
-
+  overflow: visible;
   box-shadow: 0 16px 38px rgba(88, 44, 120, 0.14);
 }
 
 .heroImage {
-  width: 100%;
+  width: min(100%, 760px);
+  margin: 28px auto 24px;
   display: block;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(91, 42, 134, 0.18);
 }
 
 .content {
@@ -167,7 +166,17 @@
 
   box-shadow: 0 10px 20px rgba(143, 70, 255, 0.22);
 }
+@media (max-width: 700px) {
+  .heroImage {
+    width: min(100%, 340px);
+    margin-top: 20px;
+    border-radius: 22px;
+  }
 
+  .card {
+    border-radius: 28px;
+  }
+}
 @media (min-width: 900px) {
   .skills {
     grid-template-columns: repeat(3, 1fr);
