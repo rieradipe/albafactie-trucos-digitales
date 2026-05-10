@@ -1,0 +1,183 @@
+.page {
+  min-height: 100vh;
+  padding: 20px 14px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #fff4fb 0%, #eef9ff 45%, #fff8e8 100%);
+}
+
+.card {
+  width: min(100%, 1050px);
+  padding: 24px 18px;
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 38px rgba(88, 44, 120, 0.12);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.step {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffb5de, #c7e8ff, #dfffc8);
+  color: #5b267d;
+  font-weight: 900;
+}
+
+.hero h1 {
+  margin: 12px 0 0;
+  font-size: clamp(2.2rem, 8vw, 4.5rem);
+  color: #4d2370;
+  line-height: 1;
+}
+
+.description {
+  color: #5f4b66;
+  font-size: 1.05rem;
+}
+
+.image {
+  width: min(100%, 300px);
+  border-radius: 28px;
+  box-shadow: 0 12px 26px rgba(88, 44, 120, 0.16);
+}
+
+.tarjetas {
+  margin: 28px auto;
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.tarjeta {
+  padding: 16px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffe8f7, #e8f4ff, #f4ffe7);
+  color: #46506f;
+  font-weight: 800;
+  text-align: center;
+  cursor: grab;
+  box-shadow: 0 8px 18px rgba(88, 44, 120, 0.1);
+}
+
+.zonas {
+  display: grid;
+  gap: 16px;
+}
+
+.zonaCompartir,
+.zonaPrivada {
+  min-height: 120px;
+  padding: 22px;
+  border-radius: 26px;
+  text-align: center;
+  border: 3px dashed transparent;
+}
+
+.zonaCompartir {
+  background: #e9f8ff;
+  border-color: #8ddcff;
+}
+
+.zonaPrivada {
+  background: #fff0f8;
+  border-color: #ff9bd3;
+}
+
+.zonas h2 {
+  margin: 0;
+  color: #4d2370;
+}
+
+.mensaje {
+  margin: 22px auto 0;
+  max-width: 620px;
+  padding: 18px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #ffd8f1, #ffd6c8, #ffeab7);
+  color: #7a295c;
+  text-align: center;
+  font-weight: 800;
+}
+
+.progreso {
+  text-align: center;
+  font-weight: 900;
+  color: #4d2370;
+}
+
+.final {
+  text-align: center;
+}
+
+.finalImage {
+  width: min(100%, 260px);
+  margin-bottom: 18px;
+}
+
+.final h1 {
+  color: #4d2370;
+}
+
+.final p {
+  color: #5f4b66;
+  line-height: 1.5;
+}
+
+.medal {
+  font-weight: 900;
+  color: #7c2d62;
+}
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-bottom: 18px;
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  color: #5b2a86;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.backButton:hover {
+  transform: translateY(-2px);
+
+  background: white;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .image {
+    width: 320px;
+  }
+
+  .tarjetas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .zonas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

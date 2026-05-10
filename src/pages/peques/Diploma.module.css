@@ -1,0 +1,179 @@
+.page {
+  min-height: 100vh;
+
+  padding: 20px 14px;
+
+  display: grid;
+  place-items: center;
+
+  background: linear-gradient(180deg, #fff4fb 0%, #eef9ff 40%, #fff8e8 100%);
+}
+
+.card {
+  width: min(100%, 1100px);
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border-radius: 36px;
+
+  overflow: hidden;
+
+  box-shadow: 0 16px 38px rgba(88, 44, 120, 0.14);
+}
+
+.heroImage {
+  width: 100%;
+  display: block;
+}
+
+.content {
+  padding: 28px 20px 36px;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #ffb5de, #c7e8ff, #dfffc8);
+
+  color: #5b267d;
+
+  font-weight: 900;
+}
+
+.content h1 {
+  margin: 18px 0 10px;
+
+  font-size: clamp(2.3rem, 8vw, 5rem);
+
+  line-height: 1;
+
+  color: #4d2370;
+}
+
+.description {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  color: #46506f;
+
+  line-height: 1.7;
+
+  font-size: 1.05rem;
+}
+
+.skills {
+  margin-top: 28px;
+
+  display: grid;
+
+  gap: 14px;
+}
+
+.skill {
+  padding: 16px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(135deg, #ffe8f7, #e8f4ff, #f4ffe7);
+
+  color: #4d2370;
+
+  font-weight: 800;
+}
+
+.diploma {
+  margin-top: 34px;
+
+  padding: 30px 20px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #fff6cf, #fff0f8, #eef7ff);
+
+  border: 4px dashed #d39cff;
+}
+
+.diploma h2 {
+  margin-top: 0;
+
+  color: #7a295c;
+
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.diploma p {
+  color: #46506f;
+  line-height: 1.6;
+}
+
+.stars {
+  margin: 20px 0;
+
+  font-size: 1.5rem;
+}
+
+.signature {
+  margin-bottom: 0;
+}
+
+.alba {
+  margin-top: 6px;
+
+  font-size: 1.2rem;
+
+  font-weight: 900;
+
+  color: #7a295c;
+}
+
+.soundBox {
+  margin-top: 30px;
+
+  padding: 22px;
+
+  border-radius: 26px;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.soundBox p {
+  margin-top: 0;
+
+  color: #46506f;
+
+  font-weight: 700;
+}
+
+.button {
+  border: 0;
+
+  padding: 14px 24px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #8f46ff, #ff4fc3);
+
+  color: white;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 20px rgba(143, 70, 255, 0.22);
+}
+
+@media (min-width: 900px) {
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content {
+    padding: 42px;
+  }
+}

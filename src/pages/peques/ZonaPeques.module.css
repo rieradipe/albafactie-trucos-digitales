@@ -1,0 +1,277 @@
+.zonaPeques {
+  min-height: 100vh;
+  padding: 32px 24px;
+  background: #fff8fd;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 32px;
+
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 18px 40px rgba(123, 94, 167, 0.14);
+}
+
+.heroText h1 {
+  margin: 18px 0;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 1;
+  color: #7b5ea7;
+}
+
+.description {
+  max-width: 520px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #4b3d63;
+}
+
+.mainButton {
+  margin-top: 24px;
+  padding: 16px 28px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #9adfff;
+  color: #4b3d63;
+
+  font-size: 1.1rem;
+  font-weight: 900;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.mainButton:hover {
+  transform: scale(1.05);
+}
+.heroImage {
+  width: min(92vw, 720px);
+  aspect-ratio: 16 / 10;
+
+  margin: 0 auto;
+  background: white;
+
+  padding: 6px;
+  border-radius: 24px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  display: block;
+}
+
+.cards {
+  max-width: 1100px;
+  margin: 32px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 14px 30px rgba(123, 94, 167, 0.1);
+}
+
+.card span {
+  font-size: 2.2rem;
+}
+
+.card h2 {
+  margin: 14px 0 8px;
+  color: #7b5ea7;
+}
+
+.card p {
+  color: #4b3d63;
+  line-height: 1.5;
+}
+
+.challenge {
+  max-width: 760px;
+  margin: 36px auto 0;
+  padding: 32px;
+
+  text-align: center;
+
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 14px 30px rgba(123, 94, 167, 0.1);
+}
+
+.challenge h2 {
+  color: #7b5ea7;
+  font-size: 2rem;
+}
+
+.messageBox {
+  margin: 20px auto;
+  padding: 22px;
+
+  background: #fff1c7;
+  border-radius: 24px;
+
+  color: #4b3d63;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  padding: 14px 24px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #d9f7c8;
+  color: #4b3d63;
+
+  font-weight: 900;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+.classroom {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 18px 40px rgba(123, 94, 167, 0.14);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.classroomImage {
+  width: 100%;
+  max-width: 620px;
+
+  display: block;
+  object-fit: contain;
+  display: block;
+
+  border-radius: 24px;
+}
+.topicButtons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.topicButtons button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 999px;
+  background: #9adfff;
+  color: #4b3d63;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .zonaPeques {
+    padding: 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 18px;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .heroText {
+    order: 2;
+  }
+
+  .heroImage {
+    order: 1;
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 1 / 1;
+    padding: 5px;
+    border-radius: 24px;
+  }
+
+  .heroImage img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+
+  .heroText h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.1;
+    margin: 10px 0;
+  }
+
+  .description {
+    margin: 0 auto;
+    font-size: 1rem;
+    max-width: 320px;
+  }
+
+  .mainButton {
+    margin-top: 18px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .classroom {
+    padding: 16px;
+  }
+
+  .classroomImage {
+    max-width: 320px;
+    border-radius: 22px;
+  }
+
+  .topicButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .topicButtons button {
+    width: 100%;
+  }
+}

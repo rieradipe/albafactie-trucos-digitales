@@ -1,0 +1,172 @@
+.retosPage {
+  min-height: 100vh;
+  padding: 14px 12px 28px;
+  background: linear-gradient(180deg, #fff8fd 0%, #f2fbff 100%);
+}
+.hero {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 20px;
+}
+
+.heroText {
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 9vw, 5rem);
+  line-height: 0.95;
+  color: #4d2370;
+}
+
+.description {
+  margin-top: 14px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #5f4b66;
+}
+
+.heroImage {
+  width: min(100%, 340px);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 12px 26px rgba(88, 44, 120, 0.16);
+}
+
+.heroImage img {
+  width: 100%;
+  display: block;
+}
+
+.description {
+  max-width: 320px;
+  margin: 14px auto 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #5f4b66;
+}
+
+.grid {
+  max-width: 340px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  width: 100%;
+  padding: 22px 18px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 20px rgba(88, 44, 120, 0.1);
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 2.1rem;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  color: #4d2370;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  color: #5f4b66;
+  line-height: 1.45;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 1100px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .heroText {
+    flex: 1;
+    text-align: left;
+  }
+
+  .heroImage {
+    width: 420px;
+    flex-shrink: 0;
+  }
+
+  .description {
+    max-width: 500px;
+  }
+  .diplomaCard {
+    max-width: 420px;
+    margin: 28px auto 0;
+    padding: 18px 24px;
+    display: block;
+    border-radius: 999px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 900;
+    color: white;
+    background: linear-gradient(135deg, #8f46ff, #ff4fc3);
+    box-shadow: 0 12px 24px rgba(143, 70, 255, 0.24);
+  }
+}
+@media (min-width: 768px) {
+  .retosPage {
+    padding: 20px 20px 40px;
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .heroText {
+    flex: 1;
+    text-align: left;
+  }
+
+  .heroImage {
+    width: 420px;
+    flex-shrink: 0;
+  }
+
+  .description {
+    max-width: 500px;
+  }
+
+  .grid {
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .card {
+    padding: 22px 18px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .heroImage {
+    max-width: 600px;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+}

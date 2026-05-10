@@ -1,0 +1,165 @@
+.page {
+  min-height: 100vh;
+  padding: 20px 14px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    180deg,
+    #fff4fb 0%,
+    #eef9ff 35%,
+    #f6fff2 70%,
+    #fff8e8 100%
+  );
+}
+
+.card {
+  width: min(100%, 620px);
+  padding: 26px 18px;
+  border-radius: 30px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 16px 38px rgba(88, 44, 120, 0.14);
+  text-decoration: none;
+  color: inherit;
+}
+
+.step {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #ffe3f4;
+  color: #7c2d62;
+  font-weight: 800;
+}
+
+.card h1 {
+  margin: 0;
+  font-size: clamp(2rem, 9vw, 4rem);
+  color: #4d2370;
+  line-height: 1;
+}
+
+.question {
+  margin: 18px auto 22px;
+  max-width: 480px;
+  color: #5f4b66;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+.option {
+  border: 0;
+  padding: 18px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #ffe8f7, #e8f4ff, #f4ffe7);
+
+  color: #4d2370;
+  font-size: 1.15rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(88, 44, 120, 0.1);
+  transition: all 0.2s ease;
+}
+.option:hover {
+  transform: translateY(-3px) scale(1.01);
+
+  box-shadow: 0 12px 24px rgba(88, 44, 120, 0.16);
+}
+
+.message {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 24px;
+  font-weight: 700;
+}
+
+.success {
+  background: linear-gradient(135deg, #fff4b8, #ffe27a);
+
+  color: #6a4700;
+}
+
+.error {
+  background: #ffe2e2;
+  color: #a12626;
+}
+.nextButton {
+  margin-top: 14px;
+  border: 0;
+  padding: 13px 24px;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #8f46ff, #ff4fc3);
+
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+
+  box-shadow: 0 10px 18px rgba(143, 70, 255, 0.24);
+
+  transition: transform 0.2s ease;
+}
+
+.nextButton:hover {
+  transform: scale(1.05);
+}
+
+.final p {
+  color: #5f4b66;
+  line-height: 1.5;
+}
+
+.finalImage {
+  width: min(100%, 260px);
+
+  margin-bottom: 18px;
+}
+
+.medal {
+  margin-top: 20px;
+  font-weight: 900;
+  color: #7c2d62;
+}
+.image {
+  width: min(100%, 260px);
+  margin: 0 auto 18px;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 12px 26px rgba(88, 44, 120, 0.16);
+}
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-bottom: 18px;
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  color: #5b2a86;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.backButton:hover {
+  transform: translateY(-2px);
+
+  background: white;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 34px 32px;
+  }
+
+  .options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
