@@ -244,7 +244,7 @@ const PersonasFalsas = () => {
       {step === 10 && (
         <section className={styles.finalCard}>
           <img
-            src="/public/RecompensaPlaca.png"
+            src="public/RecompensaPlaca.png"
             alt="Placa detective Equipo RieraDiPe"
             className={styles.badgeImage}
           />
