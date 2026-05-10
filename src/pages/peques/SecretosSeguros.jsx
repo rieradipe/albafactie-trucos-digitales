@@ -10,7 +10,7 @@ const SecretosSeguros = () => {
         <section className={styles.missionCard}>
           <div className={styles.imageBox}>
             <img
-              src="/public/AlbaFactieSecretos.png"
+              src="/AlbaFactieSecretos.png"
               alt="AlbaFactie dudando con un móvil"
             />
           </div>
@@ -112,7 +112,7 @@ const SecretosSeguros = () => {
       {step === 5 && (
         <section className={styles.finalCard}>
           <img
-            src="/public/NubeProtectora.png"
+            src="/NubeProtectora.png"
             alt="Nube de los secretos seguros"
             className={styles.cloudBadge}
           />

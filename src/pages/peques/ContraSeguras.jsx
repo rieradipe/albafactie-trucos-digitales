@@ -78,7 +78,7 @@ const ContraSeguras = () => {
         {!terminado ? (
           <>
             <img
-              src="/AlbaFactieOrdenador.png"
+              src="/AlbaFactieSecretos.png"
               alt="AlbaFactie pensando en contraseñas seguras"
               className={styles.image}
             />
