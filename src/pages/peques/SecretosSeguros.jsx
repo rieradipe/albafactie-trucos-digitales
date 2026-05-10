@@ -116,7 +116,7 @@ const SecretosSeguros = () => {
             alt="Nube de los secretos seguros"
             className={styles.cloudBadge}
           />
-          <h2> ¡Ya eres guardiana de secretos seguros!</h2>
+          <h2> ¡Ya eres guardian de secretos seguros!</h2>
 
           <p>
             Has aprendido algo muy importante: los secretos que te hacen sentir
