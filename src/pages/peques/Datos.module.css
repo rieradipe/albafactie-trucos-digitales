@@ -161,6 +161,17 @@
 
   background: white;
 }
+.tarjeta,
+.zonaCompartir,
+.zonaPrivada {
+  font-family: inherit;
+  touch-action: manipulation;
+}
+
+.seleccionada {
+  outline: 4px solid #8b5cf6;
+  transform: scale(1.03);
+}
 
 @media (min-width: 900px) {
   .hero {

@@ -15,26 +15,44 @@ const Datos = () => {
   const [tarjetas, setTarjetas] = useState(tarjetasIniciales);
   const [aciertos, setAciertos] = useState(0);
   const [mensaje, setMensaje] = useState("");
+  const [tarjetaSeleccionada, setTarjetaSeleccionada] = useState(null);
 
-  const soltarTarjeta = (ev, zona) => {
-    const id = Number(ev.dataTransfer.getData("id"));
+  const comprobarTarjeta = (id, zona) => {
     const tarjeta = tarjetas.find((item) => item.id === id);
 
     if (!tarjeta) return;
 
     if (tarjeta.tipo === zona) {
-      setTarjetas(tarjetas.filter((item) => item.id !== id));
-      setAciertos(aciertos + 1);
+      setTarjetas((prev) => prev.filter((item) => item.id !== id));
+      setAciertos((prev) => prev + 1);
       setMensaje("✨ ¡Muy bien! Has colocado la tarjeta en su sitio.");
     } else {
       setMensaje("🤔 Casi... piensa si eso debería verlo cualquier persona.");
     }
+
+    setTarjetaSeleccionada(null);
   };
-  if (tarjetas.length === 0) {
-    localStorage.setItem("reto_datos", "true");
-  }
+
+  const soltarTarjeta = (ev, zona) => {
+    ev.preventDefault();
+    const id = Number(ev.dataTransfer.getData("id"));
+    comprobarTarjeta(id, zona);
+  };
+
+  const tocarZona = (zona) => {
+    if (!tarjetaSeleccionada) {
+      setMensaje("👆 Primero toca una tarjeta y luego elige una zona.");
+      return;
+    }
+
+    comprobarTarjeta(tarjetaSeleccionada, zona);
+  };
 
   const terminado = tarjetas.length === 0;
+
+  if (terminado) {
+    localStorage.setItem("reto_datos", "true");
+  }
 
   return (
     <main className={styles.page}>
@@ -42,6 +60,7 @@ const Datos = () => {
         <Link to="/peques/retos" className={styles.backButton}>
           ↩ Mini retos
         </Link>
+
         {!terminado ? (
           <>
             <div className={styles.hero}>
@@ -49,7 +68,8 @@ const Datos = () => {
                 <p className={styles.step}>Reto 3</p>
                 <h1>🛡️ Datos privados</h1>
                 <p className={styles.description}>
-                  Arrastra cada tarjeta al lugar correcto.
+                  Arrastra cada tarjeta al lugar correcto o tócala y elige una
+                  zona.
                 </p>
               </div>
 
@@ -62,35 +82,48 @@ const Datos = () => {
 
             <section className={styles.tarjetas}>
               {tarjetas.map((tarjeta) => (
-                <div
+                <button
                   key={tarjeta.id}
-                  className={styles.tarjeta}
+                  type="button"
+                  className={`${styles.tarjeta} ${
+                    tarjetaSeleccionada === tarjeta.id
+                      ? styles.seleccionada
+                      : ""
+                  }`}
                   draggable
+                  onClick={() => {
+                    setTarjetaSeleccionada(tarjeta.id);
+                    setMensaje("Ahora toca una de las dos zonas.");
+                  }}
                   onDragStart={(ev) =>
-                    ev.dataTransfer.setData("id", tarjeta.id)
+                    ev.dataTransfer.setData("id", String(tarjeta.id))
                   }
                 >
                   {tarjeta.texto}
-                </div>
+                </button>
               ))}
             </section>
 
             <section className={styles.zonas}>
-              <div
+              <button
+                type="button"
                 className={styles.zonaCompartir}
+                onClick={() => tocarZona("compartir")}
                 onDragOver={(ev) => ev.preventDefault()}
                 onDrop={(ev) => soltarTarjeta(ev, "compartir")}
               >
                 <h2>🌈 Se puede compartir</h2>
-              </div>
+              </button>
 
-              <div
+              <button
+                type="button"
                 className={styles.zonaPrivada}
+                onClick={() => tocarZona("privado")}
                 onDragOver={(ev) => ev.preventDefault()}
                 onDrop={(ev) => soltarTarjeta(ev, "privado")}
               >
                 <h2>🔒 Mejor privado</h2>
-              </div>
+              </button>
             </section>
 
             {mensaje && <p className={styles.mensaje}>{mensaje}</p>}
