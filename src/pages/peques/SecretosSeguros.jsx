@@ -18,7 +18,7 @@ const SecretosSeguros = () => {
           <div className={styles.content}>
             <p className={styles.badge}>💜 Misión 2 de 3</p>
 
-            <h1>Secretos seguros</h1>
+            <h1>💜 Cosas que cuidamos</h1>
 
             <p className={styles.description}>
               A veces un mensaje puede hacernos sentir raros, con dudas o
@@ -47,9 +47,8 @@ const SecretosSeguros = () => {
               😈 Envíame una foto y no se lo digas a nadie.
             </div>
           </div>
-
           <p className={styles.question}>
-            ¿Cuál secreto puede hacerte sentir raro o incómodo?
+            ¿Cuál mensaje deberíamos contar a un adulto de confianza?
           </p>
 
           <div className={styles.answers}>
@@ -113,19 +112,20 @@ const SecretosSeguros = () => {
         <section className={styles.finalCard}>
           <img
             src="/NubeProtectora.png"
-            alt="Nube de los secretos seguros"
+            alt="Nube de las cosas que cuidamos"
             className={styles.cloudBadge}
           />
-          <h2> ¡Ya eres guardian de secretos seguros!</h2>
-
+          <h2> ¡Ya eres guardián de las cosas que cuidamos! </h2>
           <p>
-            Has aprendido algo muy importante: los secretos que te hacen sentir
-            mal, raro o vulnerable no se guardan.
+            Has aprendido algo muy importante: Hay información importante que
+            debemos cuidar, pero nunca guardar en secreto si nos hace sentir
+            mal.
           </p>
 
           <p className={styles.tip}>
-            💜 Ahora formas parte del equipo RieraDiPe: aquí cuidamos lo que
-            sentimos y pedimos ayuda cuando algo no está bien.
+            💜 Ahora formas parte del equipo RieraDiPe: aquí cuidamos nuestra
+            información, escuchamos lo que sentimos y pedimos ayuda cuando algo
+            no está bien.
           </p>
 
           <button onClick={() => setStep(0)}>🔄 Volver a jugar</button>
