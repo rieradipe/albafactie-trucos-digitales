@@ -75,6 +75,7 @@ const ContraSeguras = () => {
         <Link to="/peques/retos" className={styles.backButton}>
           ↩ Mini retos
         </Link>
+
         {!terminado ? (
           <>
             <img
@@ -124,12 +125,19 @@ const ContraSeguras = () => {
               alt="AlbaFactie feliz"
               className={styles.finalImage}
             />
+
             <h1>🎉 ¡Reto completado!</h1>
+
             <p>
               Ya sabes que las contraseñas son como llaves secretas para cuidar
               móviles, tablets y ordenadores.
             </p>
+
             <p className={styles.medal}>⭐ Contraseñas seguras superado ⭐</p>
+
+            <Link to="/peques/retos" className={styles.backButton}>
+              🔄 Volver a mini retos
+            </Link>
           </div>
         )}
       </section>

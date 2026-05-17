@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./SecretosSeguros.module.css";
 
 const SecretosSeguros = () => {
   const [step, setStep] = useState(0);
+  const navigate = useNavigate();
 
   return (
     <main className={styles.secretosPage}>
@@ -47,6 +49,7 @@ const SecretosSeguros = () => {
               😈 Envíame una foto y no se lo digas a nadie.
             </div>
           </div>
+
           <p className={styles.question}>
             ¿Cuál mensaje deberíamos contar a un adulto de confianza?
           </p>
@@ -115,7 +118,9 @@ const SecretosSeguros = () => {
             alt="Nube de las cosas que cuidamos"
             className={styles.cloudBadge}
           />
-          <h2> ¡Ya eres guardián de las cosas que cuidamos! </h2>
+
+          <h2>¡Ya eres guardián de las cosas que cuidamos!</h2>
+
           <p>
             Has aprendido algo muy importante: Hay información importante que
             debemos cuidar, pero nunca guardar en secreto si nos hace sentir
@@ -128,7 +133,9 @@ const SecretosSeguros = () => {
             no está bien.
           </p>
 
-          <button onClick={() => setStep(0)}>🔄 Volver a jugar</button>
+          <button onClick={() => navigate("/peques/juegos")}>
+            🔄 Volver a jugar
+          </button>
         </section>
       )}
 

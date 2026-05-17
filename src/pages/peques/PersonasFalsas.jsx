@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./PersonasFalsas.module.css";
 
 const PersonasFalsas = () => {
@@ -7,6 +8,8 @@ const PersonasFalsas = () => {
   const [dangerSelections, setDangerSelections] = useState([]);
 
   const [message, setMessage] = useState("");
+
+  const navigate = useNavigate();
 
   const handleDangerSelect = (value) => {
     if (dangerSelections.includes(value)) return;
@@ -265,7 +268,7 @@ const PersonasFalsas = () => {
             onClick={() => {
               setDangerSelections([]);
               setMessage("");
-              setStep(0);
+              navigate("/peques/juegos");
             }}
           >
             🔄 Volver a jugar
@@ -275,4 +278,5 @@ const PersonasFalsas = () => {
     </main>
   );
 };
+
 export default PersonasFalsas;
