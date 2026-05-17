@@ -14,6 +14,7 @@ import ContraSeguras from "../pages/peques/ContraSeguras";
 import MensajesSeguros from "../pages/peques/MensajesSeguros";
 import Datos from "../pages/peques/Datos";
 import Diploma from "../pages/peques/Diploma";
+import JuegosPeques from "../pages/peques/JuegosPeques";
 const AppRouter = () => {
   return (
     <Routes>
@@ -21,7 +22,7 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
 
         <Route path="/peques" element={<Peques />} />
-
+        <Route path="/peques/juegos" element={<JuegosPeques />} />
         <Route path="/peques/personas-falsas" element={<PersonasFalsas />} />
         <Route path="/peques/secretos-seguros" element={<SecretosSeguros />} />
         <Route path="/peques/retos" element={<Retos />} />
