@@ -23,11 +23,14 @@ const Home = () => {
 
         <div className="hero-actions">
           <Link to="/peques">
-            <button>Soy peque</button>
+            <button>🔎 Detectives Digitales</button>
+          </Link>
+          <Link to="/peques/superdetectives">
+            <button>🔎 Superdetectives Digitales</button>
           </Link>
 
           <Link to="/mayores">
-            <button>Soy mayor</button>
+            <button>👨‍👩‍👧‍👦 Para familias y profes</button>
           </Link>
         </div>
       </div>

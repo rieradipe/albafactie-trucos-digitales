@@ -15,6 +15,11 @@ import MensajesSeguros from "../pages/peques/MensajesSeguros";
 import Datos from "../pages/peques/Datos";
 import Diploma from "../pages/peques/Diploma";
 import JuegosPeques from "../pages/peques/JuegosPeques";
+import SuperDetectives from "../pages/peques/SuperDetectives";
+import JuegosSuperDetectives from "../pages/peques/JuegosSuperDetectives";
+import CasoNuevoAmigo from "../pages/peques/CasoNuevoAmigo";
+import CasoMensajeExtrano from "../pages/peques/CasoMensajeExtrano";
+import CasoRegaloSorpresa from "../pages/peques/CasoRegaloSorpresa";
 const AppRouter = () => {
   return (
     <Routes>
@@ -23,6 +28,7 @@ const AppRouter = () => {
 
         <Route path="/peques" element={<Peques />} />
         <Route path="/peques/juegos" element={<JuegosPeques />} />
+
         <Route path="/peques/personas-falsas" element={<PersonasFalsas />} />
         <Route path="/peques/secretos-seguros" element={<SecretosSeguros />} />
         <Route path="/peques/retos" element={<Retos />} />
@@ -39,6 +45,24 @@ const AppRouter = () => {
         />
         <Route path="/peques/retos/datos" element={<Datos />} />
         <Route path="/peques/retos/diploma" element={<Diploma />} />
+        <Route
+          path="/peques/superdetectives/misiones"
+          element={<JuegosSuperDetectives />}
+        />
+        <Route path="/peques/superdetectives" element={<SuperDetectives />} />
+
+        <Route
+          path="/peques/superdetectives/caso-nuevo-amigo"
+          element={<CasoNuevoAmigo />}
+        />
+        <Route
+          path="/peques/superdetectives/caso-mensaje-extrano"
+          element={<CasoMensajeExtrano />}
+        />
+        <Route
+          path="/peques/superdetectives/caso-regalo-sorpresa"
+          element={<CasoRegaloSorpresa />}
+        />
       </Route>
     </Routes>
   );
