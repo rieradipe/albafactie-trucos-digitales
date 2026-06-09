@@ -41,3 +41,101 @@
   font-weight: 900;
   cursor: pointer;
 }
+.collection {
+  width: 100%;
+  margin-top: 24px;
+  padding: 20px;
+
+  background: #f8fbff;
+  border-radius: 24px;
+
+  text-align: center;
+}
+
+.collection h2 {
+  margin-bottom: 20px;
+
+  color: #7b5ea7;
+  font-size: 1.4rem;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.badgeItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgeItem img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+.badgeItem p {
+  margin-top: 8px;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  color: #4b3d63;
+}
+
+.lockedBadge {
+  filter: grayscale(1);
+  opacity: 0.35;
+}
+
+.diplomaBox {
+  width: 100%;
+  margin-top: 24px;
+  padding: 20px;
+
+  background: #fff1c7;
+  border-radius: 24px;
+
+  text-align: center;
+}
+
+.diplomaBox h2 {
+  margin-bottom: 10px;
+
+  color: #7b5ea7;
+}
+
+.diplomaBox p {
+  margin-bottom: 14px;
+
+  color: #4b3d63;
+  font-weight: 700;
+}
+
+.diplomaBox button {
+  padding: 14px 22px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #d9f7c8;
+  color: #4b3d63;
+
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .badgeItem img {
+    width: 80px;
+  }
+
+  .collection h2 {
+    font-size: 1.6rem;
+  }
+}

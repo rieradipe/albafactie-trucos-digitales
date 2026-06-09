@@ -1,4 +1,4 @@
-import styles from "./Diploma.module.css";
+import styles from "./DiplomaSuper.module.css";
 
 let audio;
 
@@ -32,12 +32,12 @@ const reproducirSonido = () => {
   }
 };
 
-const Diploma = () => {
+const DiplomaSuper = () => {
   return (
     <main className={styles.page}>
       <section className={styles.card}>
         <img
-          src="/Diploma.png"
+          src="/Diploma2.png"
           alt="AlbaFactie celebración"
           className={styles.heroImage}
         />
@@ -45,34 +45,33 @@ const Diploma = () => {
         <div className={styles.content}>
           <p className={styles.badge}>🏆 Diploma desbloqueado</p>
 
-          <h1>¡Eres una detective digital!</h1>
+          <h1>¡Eres detective digital!</h1>
 
           <p className={styles.description}>
-            Has aprendido a proteger tus llaves secretas, detectar mensajes
-            sospechosos y cuidar tus datos privados.
+            Has completado los tres casos de SuperDetectives: observar antes de
+            confiar, pensar antes de pulsar y jugar con cabeza.
           </p>
 
           <div className={styles.skills}>
-            <div className={styles.skill}>🔐 Contraseñas seguras</div>
+            <div className={styles.skill}>🔎 Caso 1</div>
 
-            <div className={styles.skill}>🕵️ Mensajes sospechosos</div>
+            <div className={styles.skill}>🛼 Caso 2</div>
 
-            <div className={styles.skill}>🛡️ Datos privados</div>
+            <div className={styles.skill}>⚽ Caso 3</div>
           </div>
 
           <section className={styles.diploma}>
-            <h2>Diploma de Buen Detective Digital</h2>
+            <h2>Diploma de Buen Super Detective Digital</h2>
 
             <p>
-              AlbaFactie reconoce que has completado todos los mini retos
-              digitales.
+              AlbaFactie reconoce que has completado todos los casos digitales.
             </p>
 
             <div className={styles.stars}>⭐ ⭐ ⭐ ⭐ ⭐</div>
 
             <p className={styles.signature}>Con cariño,</p>
 
-            <p className={styles.alba}>RieraDiPe 💜</p>
+            <p className={styles.alba}>RieraDipe 💜</p>
           </section>
 
           <div className={styles.soundBox}>
@@ -88,4 +87,4 @@ const Diploma = () => {
   );
 };
 
-export default Diploma;
+export default DiplomaSuper;

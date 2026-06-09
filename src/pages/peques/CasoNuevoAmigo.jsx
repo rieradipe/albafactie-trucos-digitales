@@ -117,8 +117,12 @@ const CasoNuevoAmigo = () => {
             <p className={styles.question}>
               ¿Qué haría una SuperDetective en este momento?
             </p>
-
-            <button onClick={() => setPaso(4)}>
+            <button
+              onClick={() => {
+                localStorage.setItem("insigniaLupa", "true");
+                setPaso(4);
+              }}
+            >
               ✅ Resolver con AlbaFactie
             </button>
           </>

@@ -100,7 +100,12 @@ const CasoMensajeExtrano = () => {
               </p>
             </div>
 
-            <button onClick={() => setPaso(4)}>
+            <button
+              onClick={() => {
+                localStorage.setItem("insigniaPatines", "true");
+                setPaso(4);
+              }}
+            >
               ✅ Resolver con AlbaFactie
             </button>
           </>
@@ -122,6 +127,21 @@ const CasoMensajeExtrano = () => {
               <p>Has observado.</p>
               <p>Has hecho preguntas.</p>
               <p>Has buscado pistas antes de actuar.</p>
+            </div>
+            <div className={styles.badgeBox}>
+              <img
+                src="/patines2.png"
+                alt="Insignia Patines Tranquilos"
+                className={styles.badgeImage}
+              />
+
+              <h3>🏅 Insignia conseguida</h3>
+
+              <p>
+                <strong>Patines Tranquilos</strong>
+              </p>
+
+              <p>Has aprendido a detenerte y pensar antes de actuar.</p>
             </div>
 
             <div className={styles.guideBox}>

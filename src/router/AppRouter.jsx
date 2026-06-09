@@ -20,6 +20,7 @@ import JuegosSuperDetectives from "../pages/peques/JuegosSuperDetectives";
 import CasoNuevoAmigo from "../pages/peques/CasoNuevoAmigo";
 import CasoMensajeExtrano from "../pages/peques/CasoMensajeExtrano";
 import CasoRegaloSorpresa from "../pages/peques/CasoRegaloSorpresa";
+import DiplomaSuper from "../pages/peques/DiplomaSuper";
 const AppRouter = () => {
   return (
     <Routes>
@@ -62,6 +63,10 @@ const AppRouter = () => {
         <Route
           path="/peques/superdetectives/caso-regalo-sorpresa"
           element={<CasoRegaloSorpresa />}
+        />
+        <Route
+          path="/peques/superdetectives/diploma"
+          element={<DiplomaSuper />}
         />
       </Route>
     </Routes>

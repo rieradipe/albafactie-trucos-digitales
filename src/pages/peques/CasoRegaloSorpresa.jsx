@@ -89,8 +89,12 @@ const CasoRegaloSorpresa = () => {
                 💭 ¿Hay algo que no te termine de encajar?
               </p>
             </div>
-
-            <button onClick={() => setPaso(4)}>
+            <button
+              onClick={() => {
+                localStorage.setItem("insigniaPelota", "true");
+                setPaso(4);
+              }}
+            >
               ✅ Resolver con AlbaFactie
             </button>
           </>
@@ -112,6 +116,21 @@ const CasoRegaloSorpresa = () => {
               <p>Has observado.</p>
               <p>Has hecho preguntas.</p>
               <p>Has buscado pistas antes de actuar.</p>
+            </div>
+            <div className={styles.badgeBox}>
+              <img
+                src="/pelota.png"
+                alt="Insignia Pelota CiberSegura"
+                className={styles.badgeImage}
+              />
+
+              <h3>🏅 Insignia conseguida</h3>
+
+              <p>
+                <strong>Pelota CiberSegura</strong>
+              </p>
+
+              <p>Has aprendido a jugar con cabeza.</p>
             </div>
 
             <div className={styles.guideBox}>
