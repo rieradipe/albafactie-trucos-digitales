@@ -25,7 +25,7 @@ const SuperDetectives = () => {
 
         <div className={styles.heroImage}>
           <img
-            src="/public//SuperDetectives1.png"
+            src="/SuperDetectives1.png"
             alt="AlbaFactie como SuperDetective digital"
           />
         </div>

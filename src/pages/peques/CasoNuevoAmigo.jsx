@@ -154,6 +154,23 @@ const CasoNuevoAmigo = () => {
                 importantes.
               </p>
             </div>
+            <div className={styles.badgeBox}>
+              <img
+                src="/lupaCuriosa.png"
+                alt="Insignia Lupa Curiosa"
+                className={styles.badgeImage}
+              />
+
+              <h3>🏅 Insignia conseguida</h3>
+
+              <p>
+                <strong>Lupa Curiosa</strong>
+              </p>
+
+              <p>Has aprendido a observar antes de confiar.</p>
+            </div>
+
+            <div className={styles.guideBox}></div>
 
             <p className={styles.question}>
               Cuando algo no encaja, habla con un adulto de confianza.
